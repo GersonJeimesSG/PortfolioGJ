@@ -1,0 +1,40 @@
+.header {  /*falando com o header*/
+  max-width: 1200px;  /*para limitar o tamanho maximo da pagina*/
+  padding: 40px 20px; /*para desgrudar os elementos, criar uma margem em cima e do lado. Trabalhamos com padding, para caso queira mudar o backgrou. Se usasse margin não iria funcionar */
+  margin: 0 auto; /*para alianhar sempre no centro*/
+  display: flex; /*para ter um item do lado do outro, no caso o titulo e o menu a de navegação */
+  justify-content: space-between; /* para espaçar ao maximo entre o titulo e o menu de navegação */
+  align-items: center; /* para alinhar ao centro o titulo com os itens do menu de navegação*/
+  }
+
+.header-menu { /*por isso a classe esta no ul para os itens fica um ao lado do outro, se tivesse na nav, não daria certo */
+  display: flex; /*para os itens do menu ficar um ao lado do outro*/
+  flex-wrap: wrap; /*para quando diminuir a tela, ele ajustar ou quebra na proxima linha*/
+  gap: 20px; /*para da o espaçamento de 20 px entre os itens do menu*/
+  justify-content: center; /*para alinhar o menu no centro quando for quebrando */
+}
+
+.header-menu a {
+  font-size: 1.125rem; /*tamanho da fonte*/
+  line-height: 1.3; /*espaçamento entre as linhas*/
+  padding: 10px 20px; /*para aumentar a area de click, em caso de uso no celular, sempre usar em menus*/
+  text-decoration: none; /*retirar o sublinhado*/
+  color: #141414; /*cor do texto*/
+  display: block; /*para ele pegar corretamente os valores do padding*/
+}
+
+@media (max-width:  800px) { /*para quebrar os itens quando chegar abaixo de 800px*/
+    .header {
+      flex-direction: column; /* muda a direção do flex para coluna para os itens ir um abaixo do outro*/
+      gap: 40px; /*define o gap entre os itens*/
+      padding: 20px; /*para diminuir a distancia do padding já que a tela vai diminuir */
+    }
+    .header a {
+      background: #f5f5f5; /*coloca uma cor no link como se fosse um botão*/
+      border-radius: 4px; /*deixa as bordar arredondada*/
+
+    }
+
+  }
+
+    

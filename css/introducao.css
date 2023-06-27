@@ -1,0 +1,64 @@
+.introducao {
+  max-width: 1200px; /*definir a largura maxima de crescimento*/
+  padding: 40px 20px; /*definir os espaçamentos*/
+  margin:  0 auto; /*para centralizar os itens*/
+  display: grid; /*para ter as colunas com a imagem e o texto*/
+  grid-template-columns: 1fr 2fr; /*para definir o tamanho das colunas 1 e 2*/
+  gap: 100px; /*para distancia a imagem e o texto*/
+  align-items: center; /* para posicionar o texto no centro da posição vertical*/
+}
+
+.introducao h1 {
+  font-size: 4.3rem; /*definindo o tamanho da fonte*/
+  line-height: 1.125; /*espaçamento*/
+  margin-bottom: 30px;
+  position: relative; /*para poder definir o conteudo fique dentro dessa posiçao*/
+}
+
+.introducao h1::before {  /*pro elemento ficar por tras do texto*/
+  content: ""; /*usado em contato com o before para informar que é antes*/
+  display: block; /*para poder ser usado como um bloco e trabalha em conjunto com o width e o height para definir o seu tamanho*/
+  width: 130px; /*para definir a largura do display block acima*/
+  height: 130px; /*para definir a altura do display block acima*/
+  background:  url("../img/detalhe.svg") no-repeat center; /*é a imagem decorativa, nesse caso esses dois pauzinhos verde e amarelo*/
+  position: absolute; /*para definir que esse elemento sera de acordo com o pai que tiver o position relative*/
+  top: -15px; /*para o item ficar no topo*/
+  left: -40px; /*traz o item mais para a esquerda*/
+  z-index: -1; /*para levar o elemento pra trás*/
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+    .introducao h1 {
+      font-size: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    }
+    .introducao h1 {
+      font-size: 2rem;
+    }
+    .introducao h1::before {
+      width: 30px;
+      height: 10px;
+      left: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+  .introducao {
+    grid-template-columns: 1fr ;
+  }
+
+  .introducao img {
+    display: none;
+  }
+}

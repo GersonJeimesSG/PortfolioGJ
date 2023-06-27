@@ -1,0 +1,45 @@
+/* Para ter todas as configurações globais do site */
+/*Aqui vc configura o pardrão para o corpo, h´s, p, ul e imagem */
+body {
+  font-family: 'Fira Sans', Arial, 
+  Helvetica, sans-serif;
+  margin: 0px;
+  color: #141414;
+ 
+}
+
+h1, h2, h3, p {
+  margin:  0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%; /*para a imagem não crescer infinitamente */
+  display: block;
+}
+
+.subtitulo {
+  font-size: 7.72rem;
+  word-break: break-all ; /*Para quebrar a palavra*/
+  line-height: 1;  /*para as linhas ficarem bem proximas*/
+  text-transform: uppercase; /*para deixar todo o texto em maisculo*/
+  max-width: 4ch; /*tenta definir a quantidade de letras por linha*/
+  text-align: center;
+  width: 250px;
+  align-self: center;
+
+  }
+
+  @media (max-width: 800px) {
+    .subtitulo {
+      font-size: 3rem;
+      text-transform: capitalize; /*para ele deixar apenas a primeira letra em maisculo*/
+      max-width: initial !important; /*para ele deixar o valor original*/
+    }
+  }    
+
